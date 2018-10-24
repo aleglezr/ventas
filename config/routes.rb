@@ -20,4 +20,6 @@ get 'orden/registros'
 get '/orden/eliminar/:id', to: 'orden#eliminar'
 get '/orden/consultar/:id', to: 'orden#consultar'
 post 'orden/modificar/:id', to: 'orden#modificar'
+
+get '/', to: 'orden#registros'
 end
