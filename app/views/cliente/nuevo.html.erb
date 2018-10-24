@@ -1,0 +1,39 @@
+<br>
+<div class="row">
+	<div class="col-md-6 offset-md-3">
+		<div class="card">
+
+			<h5 style="background:#28A745" class="card-header info-color white-text text-center py-4">
+				<strong style="color:white">Nuevo cliente</strong>
+			</h5>
+
+			<!--Card content-->
+			<div class="card-body px-lg-5 pt-0">
+
+			<!-- Form -->
+			<form method="post" action="/cliente/crear" class="text-center" style="color: #757575;">
+			<%= token_tag nil %>
+
+			<!-- RFC -->
+			<div class="md-form">
+				<br>
+				<label>RFC</label>
+				<input type="text"  class="form-control" name="rfc">
+			</div>
+
+			<!-- NOMBRE -->
+			<div class="md-form">
+				<label>Cliente</label>
+				<input type="text"  class="form-control" name="nombre_cliente">
+			</div>
+
+			<!-- Guardar -->
+			<button class="btn btn-outline-success btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Guardar</button>
+
+			</form>
+			<!-- Form -->
+			</div>
+		</div>
+	<!-- Material form login -->
+	</div>
+</div>

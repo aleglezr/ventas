@@ -1,0 +1,39 @@
+<br>
+<div class="row">
+	<div class="col-md-6 offset-md-3">
+		<div class="card">
+
+			<h5 style="background:#28A745" class="card-header info-color white-text text-center py-4">
+				<strong style="color:white">Nuevo producto</strong>
+			</h5>
+
+			<!--Card content-->
+			<div class="card-body px-lg-5 pt-0">
+
+			<!-- Form -->
+			<form method="post" action="/producto/crear" class="text-center" style="color: #757575;">
+			<%= token_tag nil %>
+
+			<!-- Producto-->
+			<div class="md-form">
+				<br>
+				<label>Producto</label>
+				<input type="text"  class="form-control" name="nombre_producto">
+			</div>
+
+			<!-- Precio -->
+			<div class="md-form">
+				<label>Precio</label>
+				<input type="number"  class="form-control" name="precio">
+			</div>
+
+			<!-- Guardar -->
+			<button class="btn btn-outline-success btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Guardar</button>
+
+			</form>
+			<!-- Form -->
+			</div>
+		</div>
+	<!-- Material form login -->
+	</div>
+</div>

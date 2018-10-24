@@ -1,0 +1,56 @@
+<br>
+<div class="row">
+	<div class="col-md-6 offset-md-3">
+		<div class="card">
+
+			<h5 style="background:#28A745" class="card-header info-color white-text text-center py-4">
+				<strong style="color:white">Modificar orden</strong>
+			</h5>
+
+			<!--Card content-->
+			<div class="card-body px-lg-5 pt-0">
+
+			<!-- Form -->
+			<form method="post" action="/orden/modificar/<%=@orden.id%>" class="text-center" style="color: #757575;">
+			<%= token_tag nil %>
+
+			<!-- Cliente-->
+			<div class="md-form">
+				<br>
+				<label>Cliente</label>
+				<select name="id_cliente" class="form-control"> 
+                        <% @clientes.each do |cliente| %>
+                        <option value="<%=cliente.id%>"><%=cliente.nombre_cliente%></option>
+                        <%end%>
+                    </select>
+			</div>
+
+            <!-- Producto-->
+            <div class="md-form">
+                    <br>
+                    <label>Cliente</label>
+                    <select name="id_producto" class="form-control"> 
+                            <% @productos.each do |producto| %>
+                            <option value="<%=producto.id%>"><%=producto.nombre_producto%></option>
+                            <%end%>
+                        </select>
+                    
+                </div>
+
+                <div class="md-form">
+                        <br>
+                        <label>Unidades</label>
+                        <input type="text"  class="form-control" name="unidades" value="<%=@orden.unidad%>">
+                    </div>
+		
+
+			<!-- Guardar -->
+			<button class="btn btn-outline-success btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Guardar</button>
+
+			</form>
+			<!-- Form -->
+			</div>
+		</div>
+	<!-- Material form login -->
+	</div>
+</div>
